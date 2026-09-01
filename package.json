@@ -9,7 +9,10 @@
     "02":"tsx src/02-crypto-module.ts",
     "03":"tsx src/03-os-module.ts",
     "04":"tsx src/04-path-module.ts",
-    "05":"tsx src/05-timers-module.ts"
+    "05":"tsx src/05-timers-module.ts",
+    "06":"tsx src/06-callback-promises-asyn_await-module.ts",
+    "07":"tsx src/07-fs-module.ts",
+    "08":"tsx src/08-buffers.ts"
 
   },
   "keywords": [],
