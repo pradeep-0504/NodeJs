@@ -24,6 +24,15 @@ appEvents.on("user:registered",(user:userRegisterPayload)=>{
     console.log(`A user with ${user.email} registered successfully`)
 })
 
+appEvents.on("user:registered",(user:userRegisterPayload)=>{
+    console.log(`A welcome email was sent to ${user.email}`)
+})
+//can register multiple listeners using on
+
+appEvents.once("app-started",()=>{
+    console.log("App started succesfully")
+})
+
 
 function registerUser():void{
     const user={
@@ -33,5 +42,10 @@ function registerUser():void{
     console.log("user saved");
 
     appEvents.emit("user:registered",user);//here we pass the data from here like user--payload...this will be accesed when using like on,once..
+    appEvents.emit("app-started");
+    appEvents.emit("app-started");
+    appEvents.emit("app-started");
+    appEvents.emit("app-started");//even we emit them multiple times...it will run only once
+
 }
 registerUser();
